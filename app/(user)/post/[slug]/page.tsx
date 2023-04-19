@@ -12,6 +12,22 @@ type Props = {
     }
 }
 
+export const revalidate = 30;
+
+export async function generateStaticParams()  {
+    const query = groq`*[_type=='post']
+    {
+        slug
+    }`;
+
+    const slugs: Post[] = await client.fetch(query)
+    const slugRoutes = slugs.map((slug) => slug.slug.current);
+
+    return slugRoutes.map(slug=> ({
+        slug,
+    }))
+}
+
 async function Post({ params: { slug } }: Props) {
     const query = groq`
     *[_type=='post' && slug.current == $slug][0]
@@ -21,7 +37,6 @@ async function Post({ params: { slug } }: Props) {
         categories[]->
     }`
     const post: Post = await client.fetch(query, { slug })
-
 
     return(
         <article className="px-10 pb-28">
