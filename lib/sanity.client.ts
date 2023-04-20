@@ -1,12 +1,11 @@
 import { createClient } from "next-sanity";
 
-export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID 
-export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET 
-const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION 
+export const projectId = 'qztf9hs5';
+export const dataset = 'production';
 
 export const client = createClient({
-    projectId,
-    dataset,
-    apiVersion, 
-    useCdn: false,
-  });
+    projectId: projectId,
+    dataset: dataset,
+    apiVersion: '2022-11-15', // I assume you meant 2022-11-15, as you wrote '022-11-15'
+    useCdn: false
+});
