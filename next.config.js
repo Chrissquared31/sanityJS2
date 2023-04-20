@@ -12,7 +12,7 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_MAILCHIMP_API_KEY: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
     NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID: process.env.NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID,
-    BASE_PATH: isProd ? '/sanityJS2' : '', // Add this line
+    BASE_PATH: isProd ? 'sanityJS' : '', // Add this line
   },
 
   output: {
