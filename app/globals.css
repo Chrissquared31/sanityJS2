@@ -42,7 +42,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/nelo_classroom.png'); /* replace 'your-image-file.png' with the name of your image */
+  background-image: url('/nelo_classroom.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
