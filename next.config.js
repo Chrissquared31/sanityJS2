@@ -5,16 +5,12 @@ const nextConfig = {
   },
   images: {
     domains: ["cdn.sanity.io"],
-    unoptimized: true, // Add this line
   },
   env: {
     NEXT_PUBLIC_MAILCHIMP_API_KEY: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
     NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID: process.env.NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID,
   },
-
-  output: {
-    export: true,
-  },
+  output: 'export',
 };
 
 module.exports = nextConfig;
